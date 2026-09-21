@@ -1,0 +1,40 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run GC case",
+      "type": "java",
+      "request": "launch",
+      "mainClass": "Main",
+      "args": [
+        "${input:gcCase}"
+      ],
+      "cwd": "${workspaceFolder}"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "gcCase",
+      "type": "pickString",
+      "description": "Select the GC scenario to run",
+      "default": "isolated-root",
+      "options": [
+        "isolated-root",
+        "cycle-no-roots",
+        "consecutive-young-gcs",
+        "old-to-young-promotion",
+        "rejected-young-gc",
+        "eden-force-young-gc",
+        "exact-fit",
+        "invalid-name",
+        "full-gc-report",
+        "metrics-old-occupancy",
+        "metrics-empty-heap",
+        "metrics-all-objects-die",
+        "metrics-recommend-full-gc",
+        "metrics-no-recommend-full-gc",
+        "metrics-recommendation-before-first-young-gc"
+      ]
+    }
+  ]
+}
